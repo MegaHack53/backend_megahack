@@ -1,0 +1,14 @@
+{
+  "name": "backend_megahack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "faradayseki <chrisyuri_19@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11"
+  },
+  "scripts": {
+    "start": "node src/server"
+  }
+}
