@@ -11,4 +11,13 @@ transactionRouter.get('/', (request,response) => {
   }
 })
 
+transactionRouter.post('/',(request,response) => {
+  try {
+
+  }
+  catch(err){
+
+  }
+})
+
 export default transactionRouter;
