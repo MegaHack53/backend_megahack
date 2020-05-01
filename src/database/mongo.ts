@@ -1,5 +1,5 @@
 import '../lib/env';
-import mongoose , {} from 'mongoose';
+import mongoose from 'mongoose';
 
 const URL_MONGO = process.env.MONGO_URL || "seems like u dont set env var MONGO_URL"
 
