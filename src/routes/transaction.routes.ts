@@ -16,7 +16,7 @@ transactionRouter.get('/', async (request,response) => {
 
 transactionRouter.post('/',async (request,response) => {
   try {
-    const transaction = Transaction.create(request.body);
+    const transaction = await Transaction.create(request.body);
 
     return response.json(transaction);
   } 
