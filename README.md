@@ -12,6 +12,8 @@ install all dependencies `yarn install` and run `yarn dev`
 
 ## Interact with API :book:
 
+*development environment deploy*: ***https://megahack53-api.herokuapp.com/***
+
 > ### / transactions
 - **get method**
   - list all transactions made by user :
