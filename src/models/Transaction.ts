@@ -10,7 +10,7 @@ export interface TransactionInterface extends mongoose.Document {
 const TransactionSchema = new mongoose.Schema({
   category: { type: String, required: true },
   description: { type: String, required: true },
-  value: { type: String, required: true },
+  value: { type: Number, required: true },
   type: { type: String, required: true },
   createdAt: {
     type: Date,
