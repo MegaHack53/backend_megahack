@@ -1,17 +1,21 @@
-import mongoose , {Schema, Document} from 'mongoose';
+import * as mongoose from 'mongoose';
 
-interface TransactionInterface extends Document {
+export interface TransactionInterface extends mongoose.Document {
   category: string;
   description: string;
-  value: string;
+  value: number;
   type: 'income' | 'outcome';
 }
 
-const TransactionSchema:Schema = new mongoose.Schema({
+const TransactionSchema = new mongoose.Schema({
   category: { type: String, required: true },
   description: { type: String, required: true },
-  value: {type: String, required: true},
-  type: {type: "income" || "outcome", required: true}
-})
+  value: { type: String, required: true },
+  type: { type: String, required: true },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
 
 export default mongoose.model<TransactionInterface>('Transaction',TransactionSchema);
