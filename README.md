@@ -14,7 +14,7 @@ install all dependencies `yarn install` and run `yarn start`
 - **get method** ***response***
   - list all transactions made by user :
     ``` 
-       {
+     [ {
     		  "_id": "5eaccbb1642db9476c6817c0",
     		  "category": "Food",
     		  "description": "using delivery service",
@@ -22,7 +22,7 @@ install all dependencies `yarn install` and run `yarn start`
     		  "type": "outcome",
     		  "createdAt": "2020-05-02T01:24:01.929Z",
     		  "__v": 0
-        }
+        }, ...]
     ```
  - **post method**
     - ***JSON*** body to create a transaction :
