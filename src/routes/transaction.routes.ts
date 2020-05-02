@@ -7,7 +7,19 @@ transactionRouter.get('/', async (request,response) => {
   try {
     const transactions = await Transaction.find();
 
-    return response.json(transactions);
+    const income = transactions.reduce(
+      (worker, transaction) => (transaction.type === 'income' ? worker + transaction.value : worker),0
+    );
+
+    const outcome = transactions.reduce(
+      (worker, transaction) => (transaction.type === 'outcome' ? worker + transaction.value : worker),0
+    );
+
+    const total = income - outcome;
+
+    const balance = {income, outcome, total}
+
+    return response.json({transactions, balance});
   }
   catch(err){
     return response.json({error: err.message});
