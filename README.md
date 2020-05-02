@@ -4,7 +4,7 @@ This project serves a simple REST API designed to work with any client mainly wi
 
 ### Running the server locally
 
-install all dependencies `yarn install` and run `yarn start`
+install all dependencies `yarn install` and run `yarn dev`
 
 - access server on ***localhost:3333***
 
