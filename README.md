@@ -18,20 +18,20 @@ install all dependencies `yarn install` and run `yarn dev`
 - **get method**
   - list all transactions made by user :
     ``` 
-     transactions : [ {
-    		  "_id": "5eaccbb1642db9476c6817c0",
-    		  "category": "Food",
-    		  "description": "using delivery service",
-    		  "value": "500",
-    		  "type": "outcome",
-    		  "createdAt": "2020-05-02T01:24:01.929Z",
-    		  "__v": 0
-                       }, ... ],
-        balance : {
-                   income : 1000,
-                   outcome: 1000,
-                   total: 0
-                  }
+     {
+       transactions : [ {
+            "category": "Food",
+            "description": "using delivery service",
+            "value": "500",
+            "type": "outcome",
+            "createdAt": "2020-05-02T01:24:01.929Z",
+                         }, ... ],
+          balance : {
+                     income : 1000,
+                     outcome: 1000,
+                     total: 0
+                    }
+      }
     ```
  - **post method**
     - ***JSON*** body to create a transaction :
@@ -43,4 +43,4 @@ install all dependencies `yarn install` and run `yarn dev`
     		  "type": "outcome"	  
         }
       ```
-    - In response expect the same as body with _id, __v, and createdAt.
+    - In response expect the same as body with createdAt.
