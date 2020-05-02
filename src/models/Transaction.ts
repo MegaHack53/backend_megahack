@@ -10,8 +10,12 @@ interface TransactionInterface extends Document {
 const TransactionSchema:Schema = new mongoose.Schema({
   category: { type: String, required: true },
   description: { type: String, required: true },
-  value: {type: String, required: true},
-  type: {type: "income" || "outcome", required: true}
-})
+  value: { type: String, required: true },
+  type: { type: "income" || "outcome", required: true },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  } 
+});
 
 export default mongoose.model<TransactionInterface>('Transaction',TransactionSchema);
