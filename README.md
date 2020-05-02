@@ -10,7 +10,7 @@ install all dependencies `yarn install` and run `yarn start`
 
 ## Interact with API :book:
 
-> #### / transactions
+> ### / transactions
 - **get method** ***response***
   - list all transactions made by user :
     ``` 
