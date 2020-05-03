@@ -24,6 +24,25 @@ cardRouter.get('/:category', async (request, response) => {
   }
 })
 
+cardRouter.get('/', async (request,response) => {
+  try {
+    const cards = await Card.find();
+
+    const formattedCards = cards.map(card => {
+      const { __v, _id: id, ...rest} = card._doc;
+
+      const formatted = { id , ...rest};
+
+      return formatted;
+    })
+
+    return response.json(formattedCards);
+  }
+  catch(err){
+    return response.json({error : err.message})
+  }
+})
+
 cardRouter.post('/', async (request, response) => {
   try {
     const card = await Card.create(request.body);
