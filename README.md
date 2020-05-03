@@ -1,6 +1,11 @@
 <h2 align="center">
-  Megahack Team 53 - REST API :computer:
+  <a href="https://github.com/MegaHack53/">
+    <img alt="Open Weather Logo" src="https://shawee.io/images/welovehackathons.png" width="250px" />
+  </a>
 </h2>
+<h1 align="center">
+  Megahack Team 53 - REST API :computer:
+</h1>
 
 <p align="center">This project serves a simple REST API designed to work with any client mainly with <a href="https://github.com/MegaHack53/frontend_megahack">Team 53 Front-end</a>.</p>
 
