@@ -1,20 +1,23 @@
 import * as mongoose from 'mongoose';
 
 export interface TransactionInterface extends mongoose.Document {
-  id: string;
-  category: string;
+  author: string;
+  title: string;
+  readtime: string;
   description: string;
+  category: string;
   value: number;
-  type: 'income' | 'outcome';
-  createdAt: Date;
-  _doc: TransactionInterface;
+  url: string;
+  icon: string;
 }
 
 const TransactionSchema = new mongoose.Schema({
+  author: { type: String, required:true},
+  title: {type: String, required:true},
   category: { type: String, required: true },
   description: { type: String, required: true },
   value: { type: Number, required: true },
-  type: { type: String, enum: ["income","outcome"], required: true },
+  type: { type: String, required: true },
   createdAt: {
     type: Date,
     default: Date.now
