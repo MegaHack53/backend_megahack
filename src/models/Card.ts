@@ -1,27 +1,32 @@
 import * as mongoose from 'mongoose';
 
-export interface TransactionInterface extends mongoose.Document {
+export interface CardInterface extends mongoose.Document {
   author: string;
   title: string;
-  readtime: string;
-  description: string;
+  readtime?: string;
+  description?: string;
   category: string;
   value: number;
   url: string;
-  icon: string;
+  icon?: string;
+  createdAt: Date;
+  _doc: CardInterface;
 }
 
-const TransactionSchema = new mongoose.Schema({
+const CardSchema = new mongoose.Schema({
   author: { type: String, required:true},
   title: {type: String, required:true},
-  category: { type: String, required: true },
-  description: { type: String, required: true },
-  value: { type: Number, required: true },
-  type: { type: String, required: true },
+  readtime: {type: String, required: false, default: ""},
+  category: { type: String, required: true, enum: [
+    "tools", "habits", "invest"
+  ] },
+  description: { type: String, required: false, default: "" },
+  icon: { type: String, required: false, default: ""},
+  url: { type: String, required: true},
   createdAt: {
     type: Date,
     default: Date.now
   }
 });
 
-export default mongoose.model<TransactionInterface>('Transaction',TransactionSchema);
+export default mongoose.model<CardInterface>('Card',CardSchema);
