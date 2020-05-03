@@ -20,6 +20,7 @@ install all dependencies `yarn install` and run `yarn dev`
     ``` 
      {
        transactions : [ {
+            "_id": "5eaccbb1642db9476c6817c0",
             "category": "Food",
             "description": "using delivery service",
             "value": "500",
@@ -43,4 +44,4 @@ install all dependencies `yarn install` and run `yarn dev`
     		  "type": "outcome"	  
         }
       ```
-    - In response expect the same as body with createdAt.
+    - In response expect the same as body with _id and createdAt.
