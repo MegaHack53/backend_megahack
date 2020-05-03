@@ -62,8 +62,7 @@ install all dependencies `yarn install` and run `yarn dev`
         }
       ```
     - In response expect the same as body with id and createdAt.
-    
--
+    ---
 
 > ### / cards
 - **get method**
