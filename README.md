@@ -8,7 +8,9 @@
   <a href="https://github.com/iamseki">
     <img alt="Made by Christian Seki" src="https://img.shields.io/badge/made%20by-Christian%20Seki-brightgreen">
   </a>
-
+  <a href="https://github.com/higorreculiano">
+    <img alt="and Higor Reculiano" src="https://img.shields.io/badge/and%20-Higor%20Reculiano-brightgreen">
+  </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 </p>
 
