@@ -23,7 +23,7 @@ install all dependencies `yarn install` and run `yarn dev`
             "_id": "5eaccbb1642db9476c6817c0",
             "category": "Food",
             "description": "using delivery service",
-            "value": "500",
+            "value": 500,
             "type": "outcome",
             "createdAt": "2020-05-02T01:24:01.929Z",
                          }, ... ],
@@ -40,7 +40,7 @@ install all dependencies `yarn install` and run `yarn dev`
         {
     		  "category": "Food",
     		  "description": "using delivery service",
-    		  "value": "500",
+    		  "value": 500,
     		  "type": "outcome"	  
         }
       ```
