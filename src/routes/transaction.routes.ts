@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import Transaction from '../models/Transaction';
 import CreateFormatedTransactionsService from '../services/CreateFormatedTransactionsService';
+import ListCategoryDetailsService from '../services/ListCategoryDetailsService';
 
 const transactionRouter = Router();
 
@@ -15,6 +16,16 @@ transactionRouter.get('/', async (request,response) => {
   catch(err){
     return response.json({error: err.message});
   }
+})
+
+transactionRouter.get('/:category', async (request,response) => {
+  const { category } = request.params;
+
+  const listCategoryDetail = new ListCategoryDetailsService();
+
+  const balance = await listCategoryDetail.run(category);
+
+  return response.json({category, balance})
 })
 
 transactionRouter.post('/',async (request,response) => {
