@@ -52,7 +52,7 @@ install all dependencies `yarn install` and run `yarn dev`
       }
     ```
  - **post method**
-    - ***JSON*** body to create a transaction :
+    - body to create a transaction :
       ``` 
         {
     		  "category": "Food",
@@ -95,7 +95,7 @@ install all dependencies `yarn install` and run `yarn dev`
         }, ... ]
     ```
  - **post method**
-    - ***JSON*** body to create a card, **category** is required by passing `invest`,`habits` or `tools`.
+    - body to create a card, **category** is required by passing `invest`,`habits` or `tools`.
          - creating a `invest` or `habits` category : 
          ```  
            {
@@ -146,7 +146,7 @@ install all dependencies `yarn install` and run `yarn dev`
 	]
     ```
  - **post method**
-    - ***JSON*** body to create a post :
+    - body to create a post :
          ```  
 		{
 			"topic": "Inflation",
@@ -157,7 +157,7 @@ install all dependencies `yarn install` and run `yarn dev`
 		}
         ```
  - **put method**
-     - ***JSON*** body to create a comment in existing post :
+     - body to create a comment in existing post :
          ``` 
            {
                 "author": "ME POUPE",
