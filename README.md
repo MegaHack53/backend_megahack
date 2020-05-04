@@ -71,7 +71,7 @@ install all dependencies `yarn install` and run `yarn dev`
      [ {
     "id": "5eae4968758afb0021c01a04",
     "readtime": "7 min",
-    "description": "Uma dúvida ainda muito comum entre os brasileiros, principalmente em momentos de crise, é se vale a           pena...",
+    "description": "description about article",
     "icon": "",
     "author": "PAULO AMORIM",
     "title": "Se você AINDA tem dinheiro na poupança, precisa saber isto",
@@ -102,7 +102,7 @@ install all dependencies `yarn install` and run `yarn dev`
                 "author": "Conrado Navarro",
                 "readtime": "6 min",
                 "title": "Educação financeira: acorde agora e conquiste sua liberdade",
-                "description": "Educação financeira é sinônimo de liberdade, realização de sonhos e amor. Planilha e guardar                  dinheiro...",
+                "description": "description about article",
                 "url": "https://dinheirama.com/educacao-financeira-acorde-conquiste-liberdade/",
                 "category":"invest"
            }
@@ -118,3 +118,54 @@ install all dependencies `yarn install` and run `yarn dev`
            }
         ```
     - In response expect the same as body with id and createdAt.
+
+> ### / posts
+- **get method**
+  - list all posts about a specific **topic** query call `posts/Inflation`:
+    ```
+	[
+	  {
+	    "id": "5eaf507a78424c4ed3b286fb"
+	    "topic": "Inflation",
+	    "author": "Christian Seki",
+	    "avatar": "link to some avatar",
+	    "ocupation": "Nodejs Developer",
+	    "definition": "description about topic",
+	    "trusted": 6,
+	    "comments": [
+	      {
+		"createdAt": "2020-05-03T23:15:11.517Z",
+		"_id": "5eaf507f78424c4ed3b286fc",
+		"name": "Rafaella Seki",
+		"message": "thansk man !",
+		"avatar": "https://avatars0.githubusercontent.com/u/62911893?s=460&v=4"
+	      } , ... ],
+	    "createdAt": "2020-05-03T23:15:06.024Z",
+	    "__v": 3,
+	  }, ...
+	]
+    ```
+ - **post method**
+    - ***JSON*** body to create a post :
+         ```  
+		{
+			"topic": "Inflation",
+			"author": "Christian Seki",
+			"avatar": "URL TO AVATAR",
+			"ocupation": "Nodejs Developer",
+			"definition": "definition about topic"
+		}
+        ```
+ - **put method**
+     - ***JSON*** body to create a comment in existing post :
+         ``` 
+           {
+                "author": "ME POUPE",
+                "title": "Simulador de CDB e Letras de Crédito",
+                "icon": "https://img.icons8.com/carbon-copy/100/000000/accounting.png",
+                "url":  "http://mepoupenaweb.uol.com.br/simuladores-online-de-investimentos/simulador-de-investimento/",
+	            "category":"tools"
+           }
+        ```
+      - **add trusted** to existing post,`posts/trust/topicId`
+        - both put methods reponse is http code status 204
