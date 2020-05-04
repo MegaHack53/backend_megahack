@@ -51,6 +51,18 @@ install all dependencies `yarn install` and run `yarn dev`
                     }
       }
     ```
+  - list specific category transaction passing on query params :
+    `transactions/job`
+    ``` 
+	{
+	  "category": "job",
+	  "balance": {
+	    "income": 450,
+	    "outcome": 0,
+	    "total": 450
+	  }
+	}
+    ```
  - **post method**
     - body to create a transaction :
       ``` 
