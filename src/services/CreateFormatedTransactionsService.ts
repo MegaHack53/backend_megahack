@@ -1,10 +1,5 @@
 import Transaction from '../models/Transaction';
-
-interface Balance {
-  income: number;
-  outcome: number;
-  total: number;
-}
+import { getBalance , Balance} from '../utils/getBalance';
 
 interface TransactionInterface {
   id:string; 
@@ -24,18 +19,6 @@ class CreateFormatedTransactionService {
   async run ():Promise<FormatedTransactions>{
     const transactions = await Transaction.find();
 
-    const income = transactions.reduce(
-      (worker, transaction) => (transaction.type === 'income' ? worker + transaction.value : worker),0
-    );
-
-    const outcome = transactions.reduce(
-      (worker, transaction) => (transaction.type === 'outcome' ? worker + transaction.value : worker),0
-    );
-
-    const total = income - outcome;
-
-    const balance = {income, outcome, total}
-
     const transactionsWithFormatedId = transactions.map( transaction=> ({
       id:transaction._id, 
       category: transaction.category,
@@ -44,6 +27,8 @@ class CreateFormatedTransactionService {
       type: transaction.type,
       createdAt: transaction.createdAt
       }));
+
+    const balance = getBalance(transactions);
 
     return { transactions: transactionsWithFormatedId, balance }
   }
