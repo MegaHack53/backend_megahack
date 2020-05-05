@@ -63,6 +63,14 @@ install all dependencies `yarn install` and run `yarn dev`
 	  }
 	}
     ```
+   - list all categories available :
+    `transactions/categories`
+	    ``` 
+		[ {
+		  "id": "5eb0406184365d002198305f",
+		  "value": "job",
+		  }, ... ]
+	    ```
  - **post method**
     - body to create a transaction :
       ``` 
