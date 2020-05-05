@@ -7,7 +7,10 @@
   Megahack Team 53 - REST API :computer:
 </h1>
 
-<p align="center">This project serves a simple REST API designed to work with any client mainly with <a href="https://github.com/MegaHack53/frontend_megahack">Team 53 Front-end</a>.</p>
+<p align="justify">
+  This project is based in the MegaHack competition, as a solution to the Flourish Savings Challenge.  We developed the app KIPcash, we bet in this solution for beginners when the subject is managing personal finances. Applying features for learning, expences, community and challenges.
+ </p>
+<p align="center">The simple REST API was designed to work with any client mainly with <a href="https://github.com/MegaHack53/frontend_megahack">Team 53 Front-end</a>.</p>
 
 <p align="center">
   <a href="https://github.com/iamseki">
@@ -18,10 +21,6 @@
   </a>
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 </p>
-
-<p align="justify">
-  This project is based in the MegaHack competition, as a solution to the Flourish Savings Challenge.  We developed the app KIPcash, we bet in this solution for beginners when the subject is managing personal finances. Applying features for learning, expences, community and challenges.
- </p>
 
 ### Running server locally
 
